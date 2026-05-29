@@ -18,3 +18,14 @@
 [29-May-2026 01:27:19 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'php_imagick.dll' (tried: C:/Users/tanki/AppData/Roaming/Local/lightning-services/php-8.2.29+0/bin/win64/ext\php_imagick.dll (The network path was not found), C:/Users/tanki/AppData/Roaming/Local/lightning-services/php-8.2.29+0/bin/win64/ext\php_php_imagick.dll.dll (The specified module could not be found)) in Unknown on line 0
 [29-May-2026 01:27:19 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'php_imagick.dll' (tried: C:/Users/tanki/AppData/Roaming/Local/lightning-services/php-8.2.29+0/bin/win64/ext\php_imagick.dll (The network path was not found), C:/Users/tanki/AppData/Roaming/Local/lightning-services/php-8.2.29+0/bin/win64/ext\php_php_imagick.dll.dll (The specified module could not be found)) in Unknown on line 0
 [29-May-2026 01:27:19 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'php_imagick.dll' (tried: C:/Users/tanki/AppData/Roaming/Local/lightning-services/php-8.2.29+0/bin/win64/ext\php_imagick.dll (The network path was not found), C:/Users/tanki/AppData/Roaming/Local/lightning-services/php-8.2.29+0/bin/win64/ext\php_php_imagick.dll.dll (The specified module could not be found)) in Unknown on line 0
+[29-May-2026 02:05:58 UTC] PHP Fatal error:  Uncaught Error: Class "modules\themes\stafflink\AppAsset" not found in C:\Users\tanki\Local Sites\stafflink\app\public\wp-content\themes\stafflink\header.php:7
+Stack trace:
+#0 C:\Users\tanki\Local Sites\stafflink\app\public\wp-includes\template.php(814): require_once()
+#1 C:\Users\tanki\Local Sites\stafflink\app\public\wp-includes\template.php(749): load_template('C:\\Users\\tanki\\...', true, Array)
+#2 C:\Users\tanki\Local Sites\stafflink\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\tanki\Local Sites\stafflink\app\public\wp-content\themes\stafflink\index.php(3): get_header()
+#4 C:\Users\tanki\Local Sites\stafflink\app\public\wp-includes\template-loader.php(132): include('C:\\Users\\tanki\\...')
+#5 C:\Users\tanki\Local Sites\stafflink\app\public\wp-blog-header.php(19): require_once('C:\\Users\\tanki\\...')
+#6 C:\Users\tanki\Local Sites\stafflink\app\public\index.php(17): require('C:\\Users\\tanki\\...')
+#7 {main}
+  thrown in C:\Users\tanki\Local Sites\stafflink\app\public\wp-content\themes\stafflink\header.php on line 7

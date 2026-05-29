@@ -1,0 +1,43 @@
+@use "../base/variables";
+@use "../utils/mixin";
+@use "sass:color";
+
+.sticky-contact-btn {
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 3;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background-color: variables.$bg-primary;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 0.625rem 0 0 0.625rem;
+	padding: 1.5rem 0.5rem;
+	@include mixin.breakpoint-up(lg) {
+		padding: 1.5rem 0.75rem;
+	}
+
+	gap: 0.5rem;
+
+	.btn-text {
+		writing-mode: vertical-rl;
+		transform: rotate(180deg);
+		white-space: nowrap;
+	}
+
+	.icon-envelope {
+		@include mixin.icon-setup(variables.$url-icon-envelope);
+	}
+
+	transition: all 0.3s ease;
+
+	&:hover {
+		background-color: color.adjust(variables.$text-brand, $lightness: 5%) !important;
+	}
+}

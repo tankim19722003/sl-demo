@@ -1,0 +1,14 @@
+@use "variables";
+
+a {
+	text-decoration: none !important;
+	color: variables.$text-primary;
+
+	&.color-brand-hover:hover {
+		color: variables.$text-brand !important;
+	}
+
+	&.active-primary {
+		color: variables.$text-brand !important;
+	}
+}
