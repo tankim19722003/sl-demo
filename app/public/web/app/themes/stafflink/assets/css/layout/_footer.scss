@@ -1,0 +1,131 @@
+@use "../utils/mixin";
+@use "../base/variables";
+@use "sass:color";
+.footer {
+	background-color: variables.$bg-third-color;
+
+	.footer-main {
+		padding-top: 2.6875rem;
+		padding-bottom: 1.6875rem;
+	}
+
+	.footer-heading {
+		font-size: 0.875rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: variables.$text-primary;
+		margin-bottom: 1rem;
+	}
+
+	.footer-address .footer-text {
+		font-size: 0.875rem;
+		color: variables.$text-primary;
+		margin-bottom: 0.5rem;
+		font-style: normal;
+	}
+
+	.footer-links {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+
+		.footer-nav-item {
+			width: 50%;
+			margin-bottom: 0.5rem;
+		}
+
+		.footer-nav-link {
+			font-size: 0.875rem;
+			color: variables.$text-primary;
+			text-decoration: none;
+
+			&:hover {
+				color: variables.$text-brand;
+			}
+		}
+	}
+
+	.social-list {
+		margin-top: 1.875rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		@include mixin.breakpoint-down(md) {
+			margin-top: 0;
+		}
+
+		.social-item {
+			height: 2.5rem;
+			width: 10.813rem;
+			background: variables.$bg-dark;
+			color: #fff;
+			border-radius: 50rem;
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+
+			@include mixin.breakpoint-down(md) {
+				width: 100%;
+			}
+
+			i {
+				margin: 0 1rem;
+				font-size: 0.875rem;
+			}
+
+			span {
+				font-size: 0.875rem;
+			}
+
+			&:hover {
+				background-color: color.adjust(variables.$bg-dark, $lightness: 5%);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+		}
+	}
+
+	.footer-bottom {
+		background-color: variables.$bg-subtle;
+		padding: 1rem 0;
+
+		@include mixin.breakpoint-up(lg) {
+			padding: 0.75rem 0;
+		}
+
+		.bottom-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			@include mixin.breakpoint-up(lg) {
+				justify-content: space-between;
+			}
+		}
+
+		.copyright {
+			text-align: center;
+			align-self: center;
+
+			.copyright-text {
+				font-size: 0.75rem;
+				color: variables.$text-primary;
+				margin-bottom: 0;
+			}
+		}
+
+		.privacy {
+			.privacy-link {
+				font-size: 0.75rem;
+				color: variables.$text-primary;
+				margin-bottom: 0;
+				text-decoration: none;
+
+				&:hover {
+					color: variables.$text-brand;
+				}
+			}
+		}
+	}
+}

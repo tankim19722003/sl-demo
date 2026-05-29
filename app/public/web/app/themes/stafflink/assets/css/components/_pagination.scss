@@ -1,0 +1,44 @@
+@use "../utils/mixin";
+@use "../base/variables";
+@use "sass:color";
+
+.custom-pagination {
+	padding-top: 2.375rem;
+	padding-bottom: 3.75rem;
+
+	@include mixin.breakpoint-down(md) {
+		padding-top: 2rem;
+		padding-bottom: 2.75rem
+	}
+
+	.page-item {
+		.page-link {
+			color: variables.$text-primary;
+			background: transparent;
+			width: 1.875rem;
+			height: 1.875rem;
+
+			&.active {
+				color: variables.$text-color-muted
+			}
+
+			&:focus {
+				box-shadow: none !important;
+				outline: none !important;
+			}
+		}
+
+		.prev-btn, .next-btn {
+			&:hover {
+				background-color: color.adjust(variables.$text-brand, $lightness: -2%) !important;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 12px rgba(variables.$text-brand, 0.3);
+
+				i, span, svg {
+					filter: brightness(0) invert(1) !important;
+					opacity: 1 !important;
+				}
+			}
+		}
+	}
+}
