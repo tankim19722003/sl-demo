@@ -63,6 +63,7 @@
 		<span class="icon-envelope"></span>
 	</div>
 </a>
+<?php get_template_part('template-parts/global-modal'); ?>
 <?php wp_footer(); ?>
 </body>
 </html>

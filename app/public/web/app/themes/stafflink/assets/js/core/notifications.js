@@ -14,7 +14,7 @@
 
 	const showSuccessAlert = (message, options = {}) => {
 		if (!canUseSweetAlert()) {
-			return;
+			return Promise.resolve();
 		}
 
 		const {
@@ -25,7 +25,7 @@
 			timerProgressBar = true
 		} = options;
 
-		window.Swal.fire({
+		return window.Swal.fire({
 			title,
 			text: message,
 			icon,
@@ -37,7 +37,7 @@
 
 	const showErrorAlert = (message, options = {}) => {
 		if (!canUseSweetAlert()) {
-			return;
+			return Promise.resolve();
 		}
 
 		const {
@@ -46,7 +46,7 @@
 			confirmButtonColor = DEFAULT_CONFIRM_BUTTON_COLOR,
 		} = options;
 
-		window.Swal.fire({
+		return window.Swal.fire({
 			title,
 			text: message,
 			icon,
