@@ -31,23 +31,7 @@
 
 				<nav class="pagination-wrapper d-flex justify-content-center mt-4">
 					<ul class="pagination custom-pagination align-items-center gap-3 mb-0">
-						<?php
-						$pagination = paginate_links([
-							'prev_text' => '<i class="bi bi-chevron-left"></i>',
-							'next_text' => '<i class="bi bi-chevron-right"></i>',
-							'type'      => 'array',
-						]);
-
-						if ($pagination) {
-							foreach ($pagination as $page_link) {
-								$class = str_contains($page_link, 'current') ? 'page-item active' : 'page-item';
-								$page_link = str_replace('page-numbers', 'page-link d-flex align-items-center justify-content-center text-14 border-0 color-brand-hover', $page_link);
-								$page_link = str_replace('prev', 'prev-btn background-primary text-white rounded-circle', $page_link);
-								$page_link = str_replace('next', 'next-btn background-primary text-white rounded-circle', $page_link);
-								echo "<li class='$class'>$page_link</li>";
-							}
-						}
-						?>
+						<?php get_template_part('template-parts/pagination'); ?>
 					</ul>
 				</nav>
 			</div>

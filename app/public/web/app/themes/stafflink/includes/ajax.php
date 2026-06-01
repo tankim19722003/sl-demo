@@ -4,22 +4,10 @@ add_action('wp_ajax_nopriv_load_deposit_form', 'stafflink_ajax_load_deposit_form
 
 function stafflink_ajax_load_deposit_form()
 : void{
-	$terms = get_terms([
-		'taxonomy'   => 'nationality',
-		'hide_empty' => false,
-	]);
-
-	$nationalities = [];
-	if (!is_wp_error($terms) && !empty($terms)) {
-		foreach ($terms as $term) {
-			$nationalities[$term->term_id] = $term->name;
-		}
-	}
-
 	$args = [
 		'title'         => 'Deposit Your Resume',
 		'formId'        => 'resumeDepositForm',
-		'nationalities' => $nationalities
+		'nationalities' => stafflink_get_nationalities()
 	];
 
 	ob_start();

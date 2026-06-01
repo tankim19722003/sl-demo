@@ -2,7 +2,7 @@
 function stafflink_filter_job_query( $query )
 : void{
 	if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'job' ) ) {
-		$query->set( 'posts_per_page', 10 );
+		$query->set( 'posts_per_page', 1 );
 
 		if ( ! empty( $_GET['keyword'] ) ) {
 			$query->set( 's', sanitize_text_field( $_GET['keyword'] ) );

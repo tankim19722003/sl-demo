@@ -837,6 +837,9 @@ a.active-primary {
 .active-primary {
   color: #A2171C !important;
 }
+.active-primary .page-link {
+  color: #A2171C !important;
+}
 
 .background-primary {
   background-color: #A2171C !important;

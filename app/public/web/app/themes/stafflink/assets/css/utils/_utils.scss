@@ -55,6 +55,10 @@
 
 .active-primary {
 	color: variables.$text-brand !important;
+
+	.page-link {
+		color: #A2171C !important;
+	}
 }
 
 .background-primary {

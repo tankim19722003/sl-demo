@@ -158,7 +158,9 @@
 			success: (response) => {
 				if (response.success) {
 					$(SELECTORS.MODAL).modal('hide');
-					StafflinkNotifications.showSuccessAlert(response.data.message);
+					StafflinkNotifications.showSuccessAlert(response.data.message).then(() => {
+						window.location.reload();
+					});
 				} else {
 					StafflinkNotifications.showErrorAlert(response.data.message);
 				}
