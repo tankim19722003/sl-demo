@@ -1,0 +1,132 @@
+@use "utils/mixin";
+@use "base/variables";
+@use "sass:color";
+
+.job-seeker {
+
+	.page-title-section {
+		font-size: 2.5rem;
+	}
+
+	.job-search-wrapper {
+
+		.item-input {
+			flex: 1;
+			min-width: 12.5rem;
+		}
+
+		.search-actions {
+			gap: 0.625rem;
+
+			.btn-brand {
+				&:hover {
+					background-color: color.adjust(variables.$text-brand, $lightness: -10%);
+				}
+			}
+		}
+
+		.search-deposit {
+			margin-left: 3.5rem;
+		}
+
+		@include mixin.breakpoint-down(lg) {
+			.item-full-mobile {
+				flex: 0 0 100%;
+			}
+
+			.item-flex-mobile {
+				flex: 1;
+				min-width: 0;
+			}
+
+			.search-deposit {
+				flex: 0 0 100%;
+				margin-left: 0;
+				margin-top: 0.5rem;
+			}
+		}
+	}
+
+	.job-item {
+		border-bottom: 1px dashed variables.$border-color-separator;
+		transition: background-color 0.2s;
+
+		.job-title {
+			&::before {
+				content: "•";
+				color: variables.$text-brand;
+				margin-right: 0.5rem;
+				display: inline-block;
+			}
+
+			color: black;
+
+		}
+
+		@include mixin.breakpoint-down(md) {
+			flex-wrap: wrap;
+
+			.job-info {
+				order: 1;
+				flex: 0 0 100%;
+			}
+
+			.job-date {
+				order: 2;
+				flex: 1;
+			}
+
+			.job-location {
+				order: 3;
+				justify-content: flex-end;
+				flex: 1;
+				width: 150px;
+				flex-shrink: 0;
+			}
+
+		}
+	}
+
+}
+
+.job-detail-page {
+	font-family: variables.$font-family-primary;
+
+	.social-item {
+		width: 40px;
+		height: 40px;
+		border: 1px solid #ccc;
+		border-radius: 50%;
+
+		&:hover {
+			border: 1px solid variables.$border-primary-color !important;
+			transform: translateY(-2px);
+		}
+	}
+
+	#apply-form {
+		box-shadow: 0 0.375rem 0.75rem 0 rgba(0, 0, 0, 0.15);
+	}
+
+	.icon-facebook {
+		@include mixin.icon-setup(variables.$url-icon-facebook);
+	}
+
+	.icon-twitter {
+		@include mixin.icon-setup(variables.$url-icon-twitter);
+	}
+
+	.icon-linkedin {
+		@include mixin.icon-setup(variables.$url-icon-linkedin);
+	}
+
+	.icon-printer {
+		@include mixin.icon-setup(variables.$url-icon-printer);
+	}
+
+	.icon-plus {
+		@include mixin.icon-setup(variables.$url-icon-plus);
+	}
+
+}
+

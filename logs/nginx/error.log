@@ -1,0 +1,3 @@
+2026/05/29 14:24:10 [error] 31360#29932: *4 directory index of "C:/Users/tanki/Local Sites/stafflink/app/public/" is forbidden, client: 127.0.0.1, server: , request: "GET / HTTP/1.1", host: "stafflink.local"
+2026/05/29 14:31:22 [error] 30612#3216: *3 directory index of "C:/Users/tanki/Local Sites/stafflink/app/public/" is forbidden, client: 127.0.0.1, server: , request: "GET / HTTP/1.1", host: "stafflink.local"
+2026/05/29 14:57:58 [alert] 11768#26980: OpenEvent("ngx_master_22512") failed (2: The system cannot find the file specified)

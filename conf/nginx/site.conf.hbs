@@ -7,7 +7,7 @@ upstream php {
 server {
 	listen 127.0.0.1:{{port}};
 	listen [::1]:{{port}};
-    root   "{{root}}";
+    root   "{{root}}/web";
 
     index index.php index.html index.htm;
 
