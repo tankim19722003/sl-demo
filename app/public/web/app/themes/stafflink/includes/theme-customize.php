@@ -1,4 +1,9 @@
 <?php
+/**
+ * @param $links
+ *
+ * @return array
+ */
 function stafflink_customize_yoast_breadcrumb( $links ): array {
 	if ( is_post_type_archive( 'job' ) ) {
 		$last_index = count( $links ) - 1;

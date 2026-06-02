@@ -21,6 +21,7 @@ function stafflink_ajax_load_deposit_form()
 add_action('wp_ajax_submit_deposit_resume', 'stafflink_handle_resume_deposit');
 add_action('wp_ajax_nopriv_submit_deposit_resume', 'stafflink_handle_resume_deposit');
 
+
 function stafflink_handle_resume_deposit()
 : void{
 	stafflink_verify_security();

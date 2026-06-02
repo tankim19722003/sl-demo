@@ -8,8 +8,9 @@
 		<div class="input-group-text border-0 "><span class="icon-location"></span></div>
 		<select name="filter_classification" class="form-control select2-custom" data-placeholder="Classification">
 			<option value="">Classification</option>
-			<?php foreach (get_terms(['taxonomy' => 'job_classification', 'hide_empty' => false]) as $term): ?>
-				<option value="<?php echo esc_attr($term->slug); ?>" <?php selected($_GET['filter_classification'] ?? '', $term->slug); ?>><?php echo esc_html($term->name); ?></option>
+			<?php foreach (get_terms(['taxonomy' => 'job_classification', 'hide_empty' => FALSE]) as $term): ?>
+				<option value="<?php echo esc_attr($term->slug); ?>" <?php selected($_GET['filter_classification'] ?? '',
+					$term->slug); ?>><?php echo esc_html($term->name); ?></option>
 			<?php endforeach; ?>
 		</select>
 	</div>
@@ -18,8 +19,9 @@
 		<span class="input-group-text border-0 bg-transparent"><i class="bi bi-briefcase text-brand"></i></span>
 		<select name="filter_job_type" class="form-control select2-custom" data-placeholder="Job Type">
 			<option value="">Job Category</option>
-			<?php foreach (get_terms(['taxonomy' => 'job_type', 'hide_empty' => false]) as $term): ?>
-				<option value="<?php echo esc_attr($term->slug); ?>" <?php selected($_GET['filter_job_type'] ?? '', $term->slug); ?>><?php echo esc_html($term->name); ?></option>
+			<?php foreach (get_terms(['taxonomy' => 'job_type', 'hide_empty' => FALSE]) as $term): ?>
+				<option value="<?php echo esc_attr($term->slug); ?>" <?php selected($_GET['filter_job_type'] ?? '',
+					$term->slug); ?>><?php echo esc_html($term->name); ?></option>
 			<?php endforeach; ?>
 		</select>
 	</div>
@@ -28,10 +30,11 @@
 		<button type="button" id="btn-reset-job" class="btn btn-secondary btn-circle shadow-none d-flex align-items-center justify-content-center" onclick="window.location.href='<?php echo esc_url(get_post_type_archive_link('job')); ?>'">
 			<i class="bi bi-arrow-clockwise text-white"></i>
 		</button>
-		<button class="btn btn-brand btn-circle shadow-none background-primary" type="submit"><i class="bi bi-search text-white"></i></button>
+		<button class="btn btn-brand btn-circle shadow-none background-primary" type="submit">
+			<i class="bi bi-search text-white"></i></button>
 	</div>
 
 	<div class="search-deposit">
-		<button type="button" class="w-100 btn-stafflink btn-outline-brand btn-load-modal" data-url="<?php echo esc_url(admin_url('admin-ajax.php?action=load_deposit_form'));?>">Deposit Resume</button>
+		<button type="button" class="w-100 btn-stafflink btn-outline-brand btn-load-modal" data-url="<?php echo esc_url(admin_url('admin-ajax.php?action=load_deposit_form')); ?>">Deposit Resume</button>
 	</div>
 </form>

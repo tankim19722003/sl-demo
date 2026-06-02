@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php wp_head(); ?>
 </head>
@@ -10,7 +10,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light header-navbar">
 		<div class="container">
 			<a class="navbar-brand" href="#">
-				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/uploads/common/logo.png" alt="StaffLink Logo" class="align-baseline">
+				<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/uploads/common/logo.png" alt="StaffLink Logo" class="align-baseline">
 			</a>
 
 			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">

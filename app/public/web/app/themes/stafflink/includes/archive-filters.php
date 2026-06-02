@@ -1,4 +1,9 @@
 <?php
+/**
+ * @param $query
+ *
+ * @return void
+ */
 function stafflink_filter_job_query( $query )
 : void{
 	if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'job' ) ) {

@@ -56,8 +56,7 @@
 			</div>
 		</div>
 	</div>
-</footer>
-<a href="#contact" class="sticky-contact-btn background-primary">
+</footer><a href="#contact" class="sticky-contact-btn background-primary">
 	<span class="btn-text text-white fw-bold">Get in touch</span>
 	<div class="envelope-icon">
 		<span class="icon-envelope"></span>
@@ -65,5 +64,4 @@
 </a>
 <?php get_template_part('template-parts/global-modal'); ?>
 <?php wp_footer(); ?>
-</body>
-</html>
+</body></html>
